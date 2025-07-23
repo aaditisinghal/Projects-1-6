@@ -1,0 +1,63 @@
+# PROJECT 6
+rock=('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+paper=('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+scissors=('''
+_______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+
+print("welcome to rock, paper, scissors")
+user=input("what do you choose?rock,paper, or scissors").lower()
+if user=="rock":
+    print(rock)
+elif user=="paper":
+    print(paper)
+else:
+    print(scissors)
+
+print("computer chooses")
+import random
+computer=["rock","paper","scissors"]
+choice=random.choice(computer)
+if choice=="rock":
+    print(rock)
+    if user=="paper":
+        print("you win!")
+    elif user=="scissors":
+        print("you lose")
+    else:
+        print("tie")
+elif choice=="paper":
+    print(paper)
+    if user=="scissors":
+        print("you win!")
+    elif user=="rock":
+        print("you lose")
+    else:
+        print("tie")
+else:
+    print(scissors)
+    if user=="rock":
+        print("you win!")
+    elif user=="paper":
+        print("you lose")
+    else:
+        print("tie")
